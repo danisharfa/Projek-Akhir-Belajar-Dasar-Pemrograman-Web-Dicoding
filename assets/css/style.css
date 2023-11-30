@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar__scroll, 50px);
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+li,
+a,
+button {
+  text-decoration: none;
+  color: hsl(208, 78%, 44%);
+  font-weight: 600;
+}
+
+.header__navbar {
+  background-color: hsl(0, 0%, 100%);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar {
+  padding: 30px 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar .nav__logo {
+  max-width: 150px;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.navbar .nav__links {
+  display: flex;
+  padding: 0px 20px;
+}
+
+.navbar .nav__links li a {
+  transition: all 0.3s ease 0s;
+  padding: 10px 25px;
+  border-radius: 50px;
+}
+
+.navbar .nav__links li a:hover {
+  color: hsl(213, 100%, 70%);
+  background-color: hsl(208, 100%, 88%);
+}
+
+.navbar button {
+  padding: 10px 25px;
+  background-color: hsl(208, 100%, 88%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.navbar button:hover {
+  background-color: hsl(208, 100%, 27%);
+  color: hsl(0, 0%, 100%);
+}
+
+#home {
+  display: flex;
+  justify-content: flex-end;
+  padding: 300px 10%;
+
+  background-image: url("../images/header-background.jpg");
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  color: hsl(208, 100%, 88%);
+}
+
+#home .home__content p {
+  margin-bottom: 20px;
+}
+
+#home .home__content button {
+  padding: 10px 25px;
+  background-color: hsl(208, 100%, 88%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+#home .home__content button:hover {
+  background-color: hsl(208, 100%, 27%);
+  color: hsl(0, 0%, 100%);
+}
+
+article {
+  padding: 20px;
+  text-align: center;
+}
+
+#services .card__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-flow: wrap;
+  flex-wrap: wrap;
+}
+
+#services .card__item {
+  width: 20%;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+#services .card__item p {
+  font-weight: 400;
+}
+
+#services .card__item img {
+  width: 50px;
+}
+
+#destinations .card__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#destinations .card__item {
+  width: 30%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+#destinations .card__item img {
+  width: 100%;
+}
+
+aside {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#biodata {
+  background-color: hsl(208, 100%, 88%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 70%;
+  padding: 30px 10%;
+  margin: 30px;
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 20px 10px;
+  width: 100%;
+
+  position: relative;
+
+  background-image: url("../images/footer-background.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+
+  color: hsl(208, 100%, 88%);
+}
+
+footer .footer-top {
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 50px;
+}
+
+footer .footer-top .fab {
+  color: hsl(208, 100%, 88%);
+}
+
+footer .footer-bot {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 20px 5%;
+  }
+
+  #home {
+    padding: 150px 5%;
+  }
+
+  #home .home__content p {
+    max-width: 100%;
+  }
+
+  #services .card__item,
+  #destinations .card__item {
+    width: 45%;
+  }
+
+  #biodata {
+    width: 90%;
+  }
+}
+
+.navbar .nav__toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar .nav__links {
+    display: none;
+  }
+
+  .navbar .nav__toggle {
+    display: block;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+
+  .navbar .nav__toggle i {
+    font-size: 24px;
+  }
+
+  .navbar .nav__button {
+    margin-left: auto;
+  }
+
+  .navbar .nav__button button {
+    padding: 10px 20px;
+  }
+
+  .navbar .nav__links.active {
+    display: block;
+    position: absolute;
+    top: var(--navbar__scroll);
+    left: 0;
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+    z-index: 999;
+  }
+
+  .navbar .nav__links.active li a {
+    font-size: 18px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
